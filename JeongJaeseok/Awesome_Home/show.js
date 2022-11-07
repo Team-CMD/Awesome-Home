@@ -93,21 +93,3 @@ const todaysQuote = (quotes[Math.floor(Math.random()*quotes.length)]);
 
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;
-
-//background image
-/*const images = ["0.jpg", "1.jpg", "2.jpg"];
-
-const chosenImage = images[Math.floor(Math.random()*images.length)];
-
-console.log(chosenImage);
-
-const bgimage = document.createElement("img");
-
-console.log(bgimage);
-
-bgimage.src = `img/${chosenImage}`;
-
-console.log(bgimage);
-
-document.body.appendChild(bgimage);
-*/
