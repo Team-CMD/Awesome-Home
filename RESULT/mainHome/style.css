@@ -12,10 +12,28 @@
   color: black;
 }
 
-.intro_bg {
-  background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20110716_203%2Fcocori1988_131078439772136G91_JPEG%2F%25C7%25B3%25B0%25E6%25B9%25D9%25C5%25C1_%25284%2529.jpg&type=sc960_832);
-  width: 130%;
-  height: 721px;
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.user{
+  width: 97vw;
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.user__img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:25px; height: 25px;
+  margin-right:5px;
+}
+
+.user__name{
+  font-weight: 500;
 }
 
 #clock {
@@ -88,8 +106,9 @@
   top: 16%;
   width: 30%;
   justify-content: center;
+  text-align: center;
   align-items: center;
-  height: 70px;
+  height: auto;
   transform: translate(-50%, -50%);
   background: rgba(47, 46, 46, 0.632);
   font-size: 40px;
