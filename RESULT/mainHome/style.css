@@ -13,32 +13,62 @@
 }
 
 body {
+  
   background-repeat: no-repeat;
   background-size: cover;
   image-rendering: -webkit-optimize-contrast;
 }
 
-.user{
+input {
+  width: 20vw;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px white solid;
+  background-color: transparent;
+  text-align: center;
+  color: aliceblue;
+}
+
+input:focus {
+  outline: none;
+  /* 아웃라인 지우기 */
+  color: white
+}
+
+input::placeholder {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  text-align: center;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.user {
   width: 97vw;
   padding-top: 20px;
   display: flex;
   justify-content: flex-end;
 }
-.user__img{
+
+.user__img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:25px; height: 25px;
-  margin-right:5px;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
 }
 
-.user__name{
+.user__name {
   font-weight: 500;
 }
 
 #clock {
   display: flex;
-  position:absolute;
+  position: absolute;
   left: 50%;
   top: 35%;
   width: 300px;
@@ -53,43 +83,40 @@ body {
 }
 
 #todo-form {
-  position:absolute;
+  position: absolute;
   left: 50%;
   top: 45%;
   width: auto;
   transform: translate(-50%, -50%);
   margin: auto;
   text-align: center;
-  background: rgb(0, 0, 0);
 }
 
 #todo-list {
   display: flex;
-  position:absolute;
+  position: absolute;
   left: 50%;
   top: 52%;
   width: auto;
   justify-content: center;
   align-items: center;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.656);
   font-size: 20px;
   font: bold;
 }
 
 #weather {
-  position:absolute;
+  position: absolute;
   left: 90%;
   top: 95%;
   width: 290px;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.873);
   font-size: 20px;
 }
 
 #quote {
   display: flex;
-  position:absolute;
+  position: absolute;
   left: 11%;
   top: 95%;
   width: 300px;
@@ -101,7 +128,7 @@ body {
 }
 
 #greeting {
-  position:absolute;
+  position: absolute;
   left: 50%;
   top: 16%;
   width: 30%;
@@ -110,13 +137,11 @@ body {
   align-items: center;
   height: auto;
   transform: translate(-50%, -50%);
-  background: rgba(47, 46, 46, 0.632);
   font-size: 40px;
-  color: rgb(195, 218, 128);
 }
 
 #login-form {
-  position:absolute;
+  position: absolute;
   left: 50%;
   top: 16%;
   justify-content: center;
