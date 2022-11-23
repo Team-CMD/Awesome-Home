@@ -51,6 +51,7 @@ input::-webkit-input-placeholder {
   padding-top: 20px;
   display: flex;
   justify-content: flex-end;
+  
 }
 
 .user__img {
@@ -58,12 +59,16 @@ input::-webkit-input-placeholder {
   justify-content: center;
   align-items: center;
   width: 25px;
-  height: 25px;
-  margin-right: 5px;
+  height: 30px;
+  margin-right: 8px;
+  font-size: 25px;
 }
 
 .user__name {
-  font-weight: 500;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 23px;
+  color: rgba(255, 255, 255, 0.81);
 }
 
 #clock {
@@ -102,6 +107,9 @@ input::-webkit-input-placeholder {
   align-items: center;
   transform: translate(-50%, -50%);
   font-size: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.81);
   font: bold;
 }
 
@@ -109,9 +117,11 @@ input::-webkit-input-placeholder {
   position: absolute;
   left: 90%;
   top: 95%;
-  width: 290px;
+  width: 230px;
+  text-align: center;
   transform: translate(-50%, -50%);
   font-size: 20px;
+  background-color: aliceblue;
 }
 
 #quote {
@@ -131,13 +141,15 @@ input::-webkit-input-placeholder {
   position: absolute;
   left: 50%;
   top: 16%;
-  width: 30%;
+  width: 30vw;
   justify-content: center;
   text-align: center;
   align-items: center;
   height: auto;
   transform: translate(-50%, -50%);
   font-size: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.81);
 }
 
 #login-form {
