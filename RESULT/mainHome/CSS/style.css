@@ -98,7 +98,7 @@ body {
 
 #input-style {
   outline: none;
-  font-size: 15px;
+  font-size: 25px;
   text-align: center;
   width: 15vw;
   height: 3vh;
@@ -242,6 +242,8 @@ input::-webkit-input-placeholder {
 .user__name {
   font-weight: 700;
   background: rgba(0, 0, 0, 0.5);
+  padding: 5px 20px;
+  border-radius: 10px;
   font-size: 23px;
   color: rgba(255, 255, 255, 0.81);
 }
@@ -328,7 +330,7 @@ input::-webkit-input-placeholder {
   display: grid;
   position:absolute;
   left: 50%;
-  top: 40%;
+  top: 43%;
   justify-content: space-between;
   margin-top: 100px;
   margin-left: auto;
@@ -336,6 +338,8 @@ input::-webkit-input-placeholder {
   text-align: center;
   align-items: center;
   justify-items: center;
+  padding: 0px 20px;
+  line-height: 30px;
   width: auto;
   transform: translate(-50%, -50%);
   font-size: 20px;
@@ -435,7 +439,7 @@ input {
   transform: translate(-50%, -50%);
   font-size: 35px;
   background: rgba(0, 0, 0, 0.5);
-  color: rgba(3, 3, 3, 0.81);
+  color: rgba(255, 255, 255, 0.81);
 }
 
 #login-form {
