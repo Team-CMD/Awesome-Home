@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="website.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/website.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Righteous&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/b8d2412b52.js" crossorigin="anonymous"></script>
   <title>Awesome_Home</title>
 </head>
@@ -16,53 +18,97 @@
   <div class="wrap">
     <div class="intro_bg">
       <form class="hidden" id="login-form">
-        <input required maxlength="15" type="text" placeholder="What is your name?" />
-        <input type="submit" value="Log In" />
+        <input id="input-style" required maxlength="15" type="text" placeholder="What is your name?" />
+        <input id="input-button" class="w-btn w-btn-gra2 w-btn-gra-anim" type="submit" value="Log In" />
       </form>
       <h1 class="hidden" id="greeting"></h1>
       <h2 id="clock">00:00:00</h2>
-      <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required />
-      </form>
       <div class="user">
         <span class="user__img"><i class="fas fa-user fa-lg"></i></span>
         <span class="user__name"> </span>
       </div>
-      <ul id="todo-list"></ul>
-      <div id="quote">
-        <span></span>
-        <span></span>
+      <div id="todo-div" style="text-align: center;">
+        <h2 id="todo-h2">Type Your To-Dos</h2>
+        <form id="todo-form">
+          <input id="input-style" type="text" placeholder="오늘의 할 일을 적어주세요" required />
+        </form>
+        <ul id="todo-list"></ul>
       </div>
-      <div id="weather">
-        <span></span>
-        <span></span>
+      <form id="reset-form">
+        <div id="delete-ls">
+          <button class="w-btn w-btn-gra1" type="button" id="delete-username" onclick="removeLS()">초기화</button>
+        </div>
+      </form>
+      <div id="searchBox">
+        <input id="search-input-style" type="text" name="" class="query" value="" placeholder="검색할 내용 입력">
       </div>
-      <div class="icon-group">
-        <a href="https://hiclass.hannam.ac.kr/learningx/main" id="school" class="icon">
-          <i class="fa-solid fa-school"></i>
-        </a>
-        <a href="https://github.com/" id="github" class="icon">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://twitter.com/" id="twitter" class="icon">
-          <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="https://www.google.co.kr/" id="google" class="icon">
-          <i class="fa-brands fa-google"></i>
-        </a>
-        <a href="https://www.youtube.com/" id="youtube" class="icon">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
+      <div class="search">
+        <button class="w-btn w-btn-gra2 w-btn-gra-anim" id="searchBtn">Google 검색</button>
+      </div>
+      <div class="etc_wrap">
+        <div class="btn_wrap">
+          <div class="screen">
+            <div id="music">
+              <button class="play mBtn">
+                <img src="./img/icon/play.png" alt="playMusicBtn">
+              </button>
+              <button class="stop hidden mBtn">
+                <img src="./img/icon/play-pause.png" alt="stopMusicBtn">
+              </button>
+              <audio id="audio_player" hidden loop>
+                <source src="./music/Lauv.mp3" type="audio/mp3">
+              </audio>
+            </div>
+            <div id="quote">
+              <span id="sBlock"></span>
+              <span id="sBlock"></span>
+            </div>
+            <div id="weather">
+              <span id="wBlock"></span>
+              <span id="wBlock"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="hover-icon">
+        <div class="icon-group">
+          <a href="https://hiclass.hannam.ac.kr/learningx/main" id="school" class="icon">
+            <i class="fa-solid fa-school"></i>
+          </a>
+          <a href="https://github.com/" id="github" class="icon">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://twitter.com/" id="twitter" class="icon">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://www.google.co.kr/" id="google" class="icon">
+            <i class="fa-brands fa-google"></i>
+          </a>
+          <a href="https://www.youtube.com/" id="youtube" class="icon">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
-  <script src="username.js"></script>
-  <script src="clock.js"></script>
-  <script src="todo.js"></script>
-  <script src="japanese.js"></script>
-  <script src="weather.js"></script>
-  <script src="background.js"></script>
+  <script>
+    function removeLS() {
+      var result = confirm("초기화할까요?");
+      if (result) {
+        window.localStorage.clear();
+        window.location.reload()
+      }
+    }
+  </script>
+  <script src="JS/clock.js"></script>
+  <script src="JS/music.js"></script>
+  <script src="JS/search.js"></script>
+  <script src="JS/username.js"></script>
+  <script src="JS/todo.js"></script>
+  <script src="JS/japanese.js"></script>
+  <script src="JS/weather.js"></script>
+  <script src="JS/background.js"></script>
 </body>
 
 </html>

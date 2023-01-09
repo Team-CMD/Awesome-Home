@@ -1,0 +1,83 @@
+/* .icon-group {
+  display: flex;
+  position:absolute;
+  flex-direction: column;
+  left: 5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+#hover-icon {
+  position: absolute;
+  overflow: hidden;
+  top: 25%;
+  left: 0%;
+  width: 200px;
+  height: 500px;
+}
+
+.icon-group {
+  display: flex;
+  position:absolute;
+  flex-direction: column;
+  left: 50%;
+  top: 5%;
+  transition: 0.5s;
+  transform: translate(-50%);
+}
+
+#hover-icon:hover .icon-group {
+  left: 70%;
+  transform: translateX(-50%);
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  margin: 5px;
+  background-color: #ffe8ee;
+  height: 70px;
+  width: 70px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.icon i {
+  font-size: 25px;
+  transition: all 0.2s;
+}
+
+.icon:hover {
+  background-color: #fcf1d8;
+}
+
+.icon:hover i {
+  transform: scale(1.6);
+  color: #b3a580;
+}
+
+#school > i {
+  color: rgb(146, 42, 42);
+}
+
+#github > i {
+  color: black;
+}
+
+#twitter > i {
+  color: skyblue;
+}
+
+#google > i {
+  color: blue;
+}
+
+#youtube > i {
+  color: red;
+}

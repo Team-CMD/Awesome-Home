@@ -1,3 +1,466 @@
-.hidden {
-    display: none;
+/* @media(prefers-color-scheme:light) {
+  body{
+    color: black;
   }
+  #input-style {
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+    width: 20vw;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px black solid;
+    background-color: transparent;
+    text-align: center;
+  }
+  #todo-list {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: black;
+    font: bold;
+  }
+  
+}
+@media(prefers-color-scheme:dark) {
+  body{
+    color: white;
+  }
+  #input-style {
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+    width: 20vw;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px white solid;
+    background-color: transparent;
+    text-align: center;
+  }
+  #todo-list {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.81);
+    font: bold;
+  }
+  
+} */
+
+.hidden {
+  display: none;
+}
+
+* {
+  font-family: 'Do Hyeon', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  margin: 0px;
+  padding: 0px;
+  color: black;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* input {
+  width: 20vw;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px white solid;
+  background-color: transparent;
+  text-align: center;
+  color: aliceblue;
+} */
+
+#input-style {
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+  width: 15vw;
+  height: 3vh;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px rgb(41, 196, 111) solid;
+  background-color: transparent;
+  text-align: center;
+  color: aliceblue;
+}
+
+.w-btn-outline {
+  position: relative;
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.w-btn {
+  position: relative;
+  border: none;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 15px;
+  font-family: "paybooc-Light", sans-serif;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.w-btn:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.w-btn-outline:hover {
+  letter-spacing: 2px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.w-btn:active {
+  transform: scale(1.5);
+}
+
+.w-btn-outline:active {
+  transform: scale(1.5);
+}
+
+.w-btn-gra1 {
+  background: linear-gradient(-45deg, #33ccff 0%, #ff99cc 100%);
+  color: white;
+}
+
+.w-btn-gra2 {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  color: white;
+}
+
+.w-btn-gra-anim {
+  background-size: 400% 400%;
+  animation: gradient1 5s ease infinite;
+}
+
+@keyframes gradient1 {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient2 {
+  0% {
+      background-position: 100% 50%;
+  }
+  50% {
+      background-position: 0% 50%;
+  }
+  100% {
+      background-position: 100% 50%;
+  }
+}
+
+@keyframes ring {
+  0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+  }
+  100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+  }
+}
+
+input:focus {
+  outline: none;
+  color: rgb(255, 255, 255);
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  text-align: center;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.user {
+  width: 95vw;
+  padding-top: 2vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 30px;
+  margin-right: 8px;
+  font-size: 25px;
+}
+
+.user__name {
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 23px;
+  color: rgba(255, 255, 255, 0.81);
+}
+
+#search-input-style {
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+  width: 10vw;
+  height: 3vh;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 5px;
+  border-radius: 10px;
+  background: linear-gradient(135deg,rgba(19, 185, 127, 0.5), rgba(119, 15, 151, 0.5), rgba(75, 73, 73, 0.5));
+  border-bottom: 3px rgb(200, 28, 28) solid;
+  background-color: transparent;
+  text-align: center;
+  color: rgb(0, 225, 255);
+}
+
+#delete-ls {
+  width: 95vw;
+  padding-top: 0.5vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#searchBox {
+  position: absolute;
+  left: 45%;
+  top: 70.5%;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 70px;
+  transform: translate(-50%, -50%);
+}
+
+#searchBtn{
+  display: flex;
+  position: absolute;
+  left: 55%;
+  top: 68.8%;
+  width: flex;
+  transform: translate(-50%, -50%);
+  height: auto;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#clock {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 41%;
+  width: 20vw;
+  transform: translate(-50%, -50%);
+  height: auto;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg,rgba(75, 73, 73, 0.5), rgba(163, 43, 43, 0.5), rgba(75, 73, 73, 0.5));
+  padding: 1px 15px; 
+  border-radius: 15px;
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0.81);
+}
+
+#todo-form {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  width: auto;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  text-align: center;
+}
+
+#todo-list {
+  display: grid;
+  position:absolute;
+  left: 50%;
+  top: 40%;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
+  width: auto;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  background: rgba(255, 161, 161, 0.5);
+  color: rgb(255, 255, 255);
+  font: bold;
+}
+
+
+button,
+input {
+  cursor: pointer;
+}
+
+.mBtn {
+  display: absolute;
+  left: 0;
+  top: 140px;
+}
+#music {
+  display: flex;
+  align-items: center;
+}
+.btn_wrap button {
+  background-color: transparent;
+  border: none;
+  width: 24px;
+  height: 24px;
+}
+
+.btn_wrap img:nth-of-type(1) {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+#weather {
+  display: block;
+  position: absolute;
+  left: 90%;
+  top: 55%;
+  width: 10vw;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.523);
+}
+
+#quote {
+  display: block;
+  position: absolute;
+  left: 11%;
+  top: 55%;
+  width: 10vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.485);
+  font-size: 18px;
+}
+
+.etc_wrap {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1000;
+  width: 100%;
+  margin: 0 auto;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  height: 100px;
+  align-items: center;
+}
+
+#sBlock {
+  display: block;
+}
+
+#wBlock {
+  display: block;
+}
+
+#greeting {
+  position: absolute;
+  left: 50%;
+  top: 16%;
+  width: 20vw;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: auto;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
+  background: rgba(0, 0, 0, 0.5);
+  color: rgba(3, 3, 3, 0.81);
+}
+
+#login-form {
+  position: absolute;
+  left: 50%;
+  top: 16%;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 70px;
+  transform: translate(-50%, -50%);
+}
+
+#todo-div {
+  position: absolute;
+  left: 70%;
+  top: 20%;
+  background-color: rgba(54, 129, 129, 0.56);
+  width: 25%;
+  height: 50vh;
+}
+
+#todo-h2 {
+  position: relative;
+  font-size: 35px;
+  top: 4%;
+  color: rgb(223, 23, 186);
+}
